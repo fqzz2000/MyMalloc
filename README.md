@@ -57,7 +57,7 @@ If a sufficiently large block exists, the `place` function would be invoked. If 
 
 The implementation of find_fit is quite simple, the search starts from the static pointer FREE_HEAD and goes all the way back through the prev pointer. 
 
-In this project, we implemented two different three different selection policies, first fit, second fit, and best fit. Here is a plot that demonstrates the concept of first fit and best fit. ![first fit](./pic/first fit.png)
+In this project, we implemented two different three different selection policies, first fit, second fit, and best fit. Here is a plot that demonstrates the concept of first fit and best fit. ![first fit](./pic/first_fit.png)
 
 The second fit is a modification of the first fit. It was invented by Donald Knuth. The idea of the second fit it that the first fit tends to fill the nearest big chunks, which may increase the searching time for big chunks (you need to iterate a longer time). Compared with the first fit, the second fit can leave some sparse big chunks at the beginning, thus accelerating the finding time. 
 
