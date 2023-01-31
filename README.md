@@ -19,13 +19,13 @@ The malloc function manages memory resources using blocks. Each block uses a hea
 
 Here is a sample layout of a block (figure from CSAPP page 883). As the block is 8 bytes aligned, the 3 lower bits would always be 0 for size. Thus, we can use these three bits to store the state of the block: Allocated/Free. The Block also has a footer that contains exactly the same message as the header. Although seems redundant, the footer is critical to achieving efficient coalesce.  Between the header and footer is the payload of the block. A pointer point to the payload would be returned to the user. Padding would be added to the block to maintain the alignment.
 
-![block](.\pic\block.png)
+![block](./pic/block.png)
 
 The blocks will be placed between two special tags adjacently. Here is a figure depicting the layout of the block. At the beginning and the end of the heap, there will be two special blocks that indicate the start and the end of the heap region. Such a design helps the implementation get rid of dealing with the tedious corner cases when allocating/free blocks. 
 
 The very beginning of the layout is another special block that holds the tail of the free list. A static global pointer will always point to the head of the free list. 
 
-  ![layout](.\pic\layout.png)
+  ![layout](./pic/layout.png)
 
 There is another design of a free list that worth to be mentioned. As only the free blocks need to be added to the free list, we store the prev and next pointer inside the payload section of the free block. It occupied a total of 16 bytes right after the block header. Such a design reduced memory utilization, the memory inside the free block will not be used by the user and the allocated block does not need to store the pointer. 
 
@@ -47,7 +47,7 @@ The implementation of Coalesce can be generally separated into 6 steps:
 
 The figure below demonstrates the mechanisms of updating the header and footer during the coalescing.
 
-![Coalesces](.\pic\Coalesces.png)
+![Coalesces](./pic/Coalesces.png)
 
 ### Allocate
 
