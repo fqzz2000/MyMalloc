@@ -1,0 +1,61 @@
+SF_Full: small: 
+data_segment_size = 39861776, data_segment_free_space = 40503848
+Execution Time = 0.081369 seconds
+Fragmentation  = 0.015852
+large: 
+Execution Time = 0.309238 seconds
+Fragmentation  = 0.996982
+equal: 
+Execution Time = 0.511083 seconds
+Fragmentation  = 0.015219
+
+FF_Full
+small: 
+data_segment_size = 1216, data_segment_free_space = 426904
+Execution Time = 0.077526 seconds
+Fragmentation  = 0.997152
+large: 
+Execution Time = 0.261100 seconds
+Fragmentation  = 0.997377
+equal: 
+Execution Time = 0.492998 seconds
+Fragmentation  = 0.998877
+
+
+BF_full
+small: 
+data_segment_size = 130852008, data_segment_free_space = 142043456
+Execution Time = 3.299253 seconds
+Fragmentation  = 0.078789
+large: 
+Execution Time = 38.654203 seconds
+Fragmentation  = 0.947478
+equal: 
+Execution Time = 0.488753 seconds
+Fragmentation  = 0.015219
+
+FF_implicit: 
+small: 
+data_segment_size = 80536, data_segment_free_space = 277408
+Execution Time = 27.924267 seconds
+Fragmentation  = 0.709684
+large: 
+Execution Time = 65.928441 seconds
+Fragmentation  = 0.820390
+equal: 
+Execution Time = 290.776501 seconds
+Fragmentation  = 0.997347
+
+SF_implicit:
+small: 
+large: 
+equal: 
+
+small: 
+data_segment_size = 3806238784, data_segment_free_space = 4133704384
+Execution Time = 83.450712 seconds
+Fragmentation  = 0.079218
+large: 
+Execution Time = 39.916647 seconds
+Fragmentation  = 0.000000
+equal: 
